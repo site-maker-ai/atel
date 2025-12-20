@@ -1,0 +1,398 @@
+/* ===================================================
+   ATEL MİMARLIK - GLOBAL AYARLAR
+=================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #F5F7FA;
+    color: #12263A;
+    line-height: 1.7;
+}
+
+/* ===================================================
+   GENEL YAPILAR
+=================================================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.center {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: #12263A;
+}
+
+/* ===================================================
+   BUTONLAR
+=================================================== */
+
+.btn-primary {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: #12263A;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0d1d2e;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: #808285;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #6b6e71;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 12px 32px;
+    border: 2px solid #12263A;
+    color: #12263A;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #12263A;
+    color: #fff;
+}
+
+/* ===================================================
+   NAVBAR
+=================================================== */
+
+.navbar {
+    background-color: #12263A;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.brand img {
+    height: 42px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background-color: #808285;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ===================================================
+   HERO ALANI
+=================================================== */
+
+.hero {
+    height: 90vh;
+    background: url("hero.jpg") center / cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(18, 38, 58, 0.85);
+    height: 100%;
+}
+
+.hero-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: #e0e0e0;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* ===================================================
+   HAKKIMIZDA ÖN İZLEME
+=================================================== */
+
+.about-preview {
+    padding: 100px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.about-text h3 {
+    font-size: 1.1rem;
+    color: #808285;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+/* ===================================================
+   HİZMETLER
+=================================================== */
+
+.services-preview {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: #F5F7FA;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+/* ===================================================
+   CTA
+=================================================== */
+
+.cta {
+    background: linear-gradient(135deg, #12263A, #1b3a57);
+    padding: 90px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+}
+
+.cta-content p {
+    margin-bottom: 30px;
+    color: #d0d0d0;
+}
+
+/* ===================================================
+   FOOTER
+=================================================== */
+
+.footer {
+    background-color: #12263A;
+    color: #fff;
+    padding: 70px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+}
+
+.footer p,
+.footer a {
+    color: #d1d1d1;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #0d1d2e;
+    font-size: 0.85rem;
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media (max-width: 992px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .nav-menu {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #12263A;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
